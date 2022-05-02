@@ -1,0 +1,37 @@
+import java.util.*;
+public class GradeCalculation {
+   public static void main(String args[]) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter The Student Marks::");
+      int average = sc.nextInt();
+      char grade;
+      if(average>=90){
+         grade = 'A';
+      }else if(average>=75&& average<90){
+         grade = 'B';
+      }
+      else if(average>=50 && average<75){
+         grade = 'C';
+      }
+      else {
+         grade = 'F';
+      }
+
+      switch(grade) {
+         case 'A' :
+            System.out.println("Excellent!");
+            break;
+         case 'B' :
+            System.out.println("Well done");
+            break;
+         case 'C' :
+            System.out.println("You passed");
+         case 'F' :
+            System.out.println("Better try again");
+            break;
+         default :
+         System.out.println("Invalid grade");
+      }
+      System.out.println("Your grade is "+""+ grade);
+   }
+}
